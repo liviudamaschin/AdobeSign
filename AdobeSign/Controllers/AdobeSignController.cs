@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Security.Cryptography;
 using AdobeSignRESTClient;
 using Microsoft.AspNetCore.Mvc;
@@ -26,7 +27,8 @@ namespace AdobeSignApi.Controllers
         }
 
         //string filename, byte[] file, string mimeType = null
-        [HttpGet("TransientDocument")]
+        //obsolete
+        [HttpGet("TransientDocument_UNUSED")]
         public async Task TransientDocument()
         {
             await this.RefreshTokenAsync().ConfigureAwait(true);
@@ -53,10 +55,20 @@ namespace AdobeSignApi.Controllers
         [HttpPost("CreateAgreement")]
         public async Task<AgreementCreationResponse> CreateAgreement([FromBody]AgreementMinimalRequest agreement)
         {
-            await this.RefreshTokenAsync().ConfigureAwait(true);
-            var response = client.CreateAgreement(agreement).Result;
+            Task<AgreementCreationResponse> response;
+            try
+            {
+                await this.RefreshTokenAsync().ConfigureAwait(true);
+                response = Task.FromResult(client.CreateAgreement(agreement).Result);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+            
 
-            return response;
+            return await response;
             //client.CreateAgreement();
         }
 
@@ -82,6 +94,20 @@ namespace AdobeSignApi.Controllers
                 return new BadRequestResult();
             }
         }
+
+        [HttpPost("Notification")]
+        public void AgreementNotificationPost(WebHookInfo webHookInfo)
+        {
+
+        }
+
+        [HttpGet("Notification")]
+        public void AgreementNotificationGet()
+        {
+
+        }
+
+
         //[HttpPost("UpdateAgreementStatus")]
         //public async Task<string> UpdateAgreementStatus()
         //{

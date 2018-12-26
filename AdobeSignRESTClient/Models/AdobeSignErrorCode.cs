@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AdobeSignRESTClient.Models
+﻿namespace AdobeSignRESTClient.Models
 {
     public class AdobeSignErrorCode
     {

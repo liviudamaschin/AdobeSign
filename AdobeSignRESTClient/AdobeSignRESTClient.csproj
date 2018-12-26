@@ -5,6 +5,47 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\_AgreementCreationResponse_2.cs" />
+    <Compile Remove="Models\_AgreementDocument.cs" />
+    <Compile Remove="Models\_AgreementDocuments.cs" />
+    <Compile Remove="Models\_AgreementInfo.cs" />
+    <Compile Remove="Models\_AgreementRequest.cs" />
+    <Compile Remove="Models\_AgreementStatusUpdateInfo.cs" />
+    <Compile Remove="Models\_AgreementStatusUpdateResponse.cs" />
+    <Compile Remove="Models\_AgreementSupportingDocument.cs" />
+    <Compile Remove="Models\_AlternateParticipantInfo.cs" />
+    <Compile Remove="Models\_AlternateParticipantResponse.cs" />
+    <Compile Remove="Models\_CounterSignerInfo.cs" />
+    <Compile Remove="Models\_CounterSignerSetInfo.cs" />
+    <Compile Remove="Models\_DeviceLocation.cs" />
+    <Compile Remove="Models\_DisplayUserInfo.cs" />
+    <Compile Remove="Models\_DisplayUserSetInfo.cs" />
+    <Compile Remove="Models\_DocumentCreationInfo.cs" />
+    <Compile Remove="Models\_DocumentHistoryEvent.cs" />
+    <Compile Remove="Models\_FormFieldLocation.cs" />
+    <Compile Remove="Models\_InteractiveOptions.cs" />
+    <Compile Remove="Models\_MergefieldInfo.cs" />
+    <Compile Remove="Models\_NextParticipantInfo.cs" />
+    <Compile Remove="Models\_NextParticipantSetInfo.cs" />
+    <Compile Remove="Models\_ParticipantEmailInfo.cs" />
+    <Compile Remove="Models\_ParticipantEmailSetInfo.cs" />
+    <Compile Remove="Models\_RecipientMemberInfo.cs" />
+    <Compile Remove="Models\_ReminderCreationInfo.cs" />
+    <Compile Remove="Models\_ReminderCreationResult.cs" />
+    <Compile Remove="Models\_RequestFormField.cs" />
+    <Compile Remove="Models\_UserAgreement.cs" />
+    <Compile Remove="Models\_UserAgreements.cs" />
+    <Compile Remove="Models\_WidgetCreationInfo.cs" />
+    <Compile Remove="Models\_WidgetCreationResponse.cs" />
+    <Compile Remove="Models\_WidgetMinimalRequest.cs" />
+    <Compile Remove="Models\_WidgetPersonalizationInfo.cs" />
+    <Compile Remove="Models\_WidgetPersonalizedResponse.cs" />
+    <Compile Remove="Models\_WidgetSecurityOption.cs" />
+    <Compile Remove="Models\_WidgetStatusUpdateInfo.cs" />
+    <Compile Remove="Models\_WidgetStatusUpdateResponse.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.1-beta1" />
     <PackageReference Include="RestSharp" Version="106.5.4" />
   </ItemGroup>

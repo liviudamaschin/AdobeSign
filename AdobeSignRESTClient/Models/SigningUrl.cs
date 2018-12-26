@@ -1,5 +1,4 @@
-﻿
-namespace AdobeSignRESTClient.Models
+﻿namespace AdobeSignRESTClient.Models
 {
     public class SigningUrl
     {
